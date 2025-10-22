@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Getter
@@ -14,7 +16,7 @@ public class UserEntity {
 
     @Id
     @GeneratedValue
-    @Column(name = "id", nullable = false, unique = true, updatable = false)
+    @Column(name = "id", nullable = false, updatable = false)
     private UUID id;
 
     @Column(name = "username", nullable = false)
@@ -31,5 +33,8 @@ public class UserEntity {
 
     @Column(name = "market_id", nullable = false, updatable = false)
     private UUID marketId;
+
+    @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
+    private Set<AuthorityEntity> authorities = new HashSet<>();
 
 }
