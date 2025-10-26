@@ -3,3 +3,26 @@ parameter:
     cannot-be-less-than-one: Parameter 'limit' cannot be less than 1
   offset:
     cannot-be-negative: Parameter 'offset' cannot be negative
+validation:
+  user-dto:
+    username:
+      not-null: Username cannot be null
+      not-blank: Username cannot be empty
+      pattern: Username can only contain latin letters, numbers and spaces
+      size: Username must be between 3 and 255 characters long
+    email:
+      not-null: User email cannot be null
+      not-blank: User email cannot be empty
+      pattern: User email must be in format example@email.com
+      size: User email must be between 5 and 255 characters long
+    phone:
+      not-null: User phone number cannot be null
+      pattern: User phone number must be in format +380111111111 or empty
+    password:
+      not-null: User password cannot be null
+      not-blank: User password cannot be empty
+      size: User password must be between 8 and 255 characters long
+    active:
+      not-null: User activity flag cannot be null
+    market-id:
+      not-null: Market identifier cannot be null
