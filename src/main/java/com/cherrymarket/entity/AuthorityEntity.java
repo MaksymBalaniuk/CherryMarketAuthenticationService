@@ -22,6 +22,9 @@ public class AuthorityEntity {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
+    @Column(name = "basic")
+    private Boolean basic;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_authorities",
             joinColumns = {@JoinColumn(name = "authority_id", referencedColumnName = "id")},
