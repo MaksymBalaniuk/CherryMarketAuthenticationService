@@ -1,0 +1,5 @@
+parameter:
+  limit:
+    cannot-be-less-than-one: Параметр 'limit' не може бути меншим за 1
+  offset:
+    cannot-be-negative: Параметр 'offset' не може бути від'ємним

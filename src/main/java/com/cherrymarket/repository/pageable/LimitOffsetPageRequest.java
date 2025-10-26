@@ -14,10 +14,10 @@ public class LimitOffsetPageRequest implements Pageable {
 
     public LimitOffsetPageRequest(int limit, long offset, Sort sort) {
         if (limit < 1)
-            throw new IllegalArgumentException("limit_cannot_be_less_than_one");
+            throw new IllegalArgumentException("parameter.limit.cannot-be-less-than-one");
 
         if (offset < 0)
-            throw new IllegalArgumentException("offset_cannot_be_negative");
+            throw new IllegalArgumentException("parameter.offset.cannot-be-negative");
 
         this.limit = limit;
         this.offset = offset;

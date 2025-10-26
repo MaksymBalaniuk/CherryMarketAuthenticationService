@@ -1,0 +1,5 @@
+parameter:
+  limit:
+    cannot-be-less-than-one: Parameter 'limit' cannot be less than 1
+  offset:
+    cannot-be-negative: Parameter 'offset' cannot be negative
