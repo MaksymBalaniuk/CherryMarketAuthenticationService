@@ -13,9 +13,7 @@ import java.util.UUID;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, UUID> {
 
-    Optional<UserEntity> findByMarketIdAndUsername(UUID marketId, String username);
-
-    Boolean existsByMarketIdAndUsername(UUID marketId, String username);
+    Optional<UserEntity> findByMarketIdAndEmail(UUID marketId, String email);
 
     Boolean existsByMarketIdAndEmail(UUID marketId, String email);
 
